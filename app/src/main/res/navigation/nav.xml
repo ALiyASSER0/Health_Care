@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/employee"
+        android:name="com.example.hospital.UI.hr.Employee.Employee"
+        android:label="Employee" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.hospital.UI.hr.Register.Register"
+        android:label="Register" >
+        <action
+            android:id="@+id/action_register_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.hospital.UI.hr.Home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_employee"
+            app:destination="@id/employee" />
+        <action
+            android:id="@+id/action_home2_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hospital.UI.auth.Login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_home2"
+            app:destination="@id/home2"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_patientRegister"
+            app:destination="@id/patientRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientRegister"
+        android:name="com.example.hospital.UI.auth.Register.PatientRegister"
+        android:label="PatientRegister" >
+        <action
+            android:id="@+id/action_patientRegister_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/patientRegister"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

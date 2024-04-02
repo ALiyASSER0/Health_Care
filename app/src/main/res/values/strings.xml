@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Hospital</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="password_confirm">confirm password</string>
+    <string name="login">Login</string>
+    <string name="to_continue_login_now">To Continue , Login Now</string>
+    <string name="welcome_back">Welcome back !</string>
+    <string name="gender">Gender</string>
+    <string name="specialist">Specialist</string>
+    <string name="role">Role</string>
+    <string name="status">Status</string>
+    <string name="blood">Blood Type</string>
+
+    <!--   Page hr-->
+    <string name="attendance">Attendance</string>
+    <string name="newEmployee">New Employee</string>
+    <string name="employee">Employee</string>
+    <string name="profile">My Profile</string>
+
+
+    <!--Page HR_Employee -->
+
+    <string name="search_for_employee">Search for Employee</string>
+
+
+    <!-- Page Register-->
+    <string name="new_user">New User</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="nationalIdNumber">national ID number</string>
+    <string name="insuranceNumber">insurance number</string>
+    <string name="address">Address</string>
+    <string name="birthday">Birthday</string>
+    <string name="create_user">Create User</string>
+
+    <!--    Spinner-->
+
+
+    <string-array name="spinner_specialist">
+        <item>Specialist</item>
+        <item>doctor</item>
+        <item>nurse</item>
+        <item>receptionist</item>
+        <item>manger</item>
+        <item>laboratory Physician</item>
+        <item>hr</item>
+    </string-array>
+
+    <string-array name="spinner_status">
+        <item>Status</item>
+        <item>Single</item>
+        <item>Married</item>
+    </string-array>
+
+    <string-array name="spinner_role">
+        <item>Role</item>
+        <item>Admin</item>
+        <item>User</item>
+    </string-array>
+
+    <string-array name="spinner_type">
+        <item>Blood Type</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+</resources>

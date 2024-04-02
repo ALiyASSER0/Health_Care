@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_splash_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/new_user"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@id/btn_back" />
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_back"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/_8sdp"
+            />
+
+
+        <EditText
+            android:id="@+id/edit_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawableStart="@drawable/ic_green_user"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/first_name"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back"
+            />
+
+        <EditText
+            android:id="@+id/edit_lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawableStart="@drawable/ic_green_user"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/last_name"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_fname"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/main_color"
+            app:boxStrokeColor="@color/main_color"
+            app:endIconTint="@color/arrow"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/gender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintTop_toBottomOf="@+id/edit_lname"
+
+            >
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_gender"
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_green_gender"
+            android:drawablePadding="@dimen/_7sdp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinner_specialist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/main_color"
+            app:boxStrokeColor="@color/main_color"
+            app:endIconTint="@color/arrow"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/specialist"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_gender"
+
+            >
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_specialist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_green_type"
+                android:drawablePadding="@dimen/_7sdp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/edit_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="@string/birthday"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:clickable="false"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_specialist"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:drawableStartCompat="@drawable/ic_green_date" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinner_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/main_color"
+            app:boxStrokeColor="@color/main_color"
+            app:endIconTint="@color/arrow"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/status"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintTop_toBottomOf="@+id/edit_birthday"
+
+            >
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_green_status"
+                android:drawablePadding="@dimen/_7sdp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinner_role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/main_color"
+            app:boxStrokeColor="@color/main_color"
+            app:endIconTint="@color/arrow"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/role"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_status"
+
+            >
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_green_user"
+                android:drawablePadding="@dimen/_7sdp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinner_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/main_color"
+            app:boxStrokeColor="@color/main_color"
+            app:endIconTint="@color/arrow"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/blood"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_role"
+
+            >
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_33sdp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.10"
+            app:layout_constraintHeight_percent="0.025"
+            app:layout_constraintTop_toTopOf="@+id/spinner_type"
+            app:layout_constraintStart_toStartOf="@+id/spinner_type"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
+            android:src="@drawable/blood"
+            />
+
+        <EditText
+            android:id="@+id/edit_nationalID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:hint="@string/nationalIdNumber"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_type"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.10"
+            app:layout_constraintHeight_percent="0.025"
+            app:layout_constraintTop_toTopOf="@+id/edit_nationalID"
+            app:layout_constraintStart_toStartOf="@+id/edit_nationalID"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_nationalID"
+            android:src="@drawable/identity"
+            />
+        <EditText
+            android:id="@+id/edit_InsuranceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_32sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:hint="@string/insuranceNumber"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nationalID"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.10"
+            app:layout_constraintHeight_percent="0.025"
+            app:layout_constraintTop_toTopOf="@+id/edit_InsuranceNumber"
+            app:layout_constraintStart_toStartOf="@+id/edit_InsuranceNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_InsuranceNumber"
+            android:src="@drawable/insurance_number"
+            />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/phone"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_InsuranceNumber"
+            />
+
+        <EditText
+            android:id="@+id/edit_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawableStart="@drawable/ic_green_address"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/address"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_phone"
+            />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edit_shape_trans"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/email"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_address"
+            />
+
+
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.90"
+            app:layout_constraintHeight_percent="0.057"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:backgroundTint="@color/main_color"
+            android:text="Create User"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email"
+             />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="invisible"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:elevation="@dimen/_50sdp"
+           android:outlineSpotShadowColor="@color/orange"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_create"
+            app:layout_constraintEnd_toEndOf="@+id/btn_create"
+            app:layout_constraintTop_toTopOf="@+id/btn_create"
+            app:layout_constraintStart_toStartOf="@+id/btn_create" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
