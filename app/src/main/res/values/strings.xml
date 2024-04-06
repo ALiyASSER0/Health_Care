@@ -35,6 +35,7 @@
     <string name="address">Address</string>
     <string name="birthday">Birthday</string>
     <string name="create_user">Create User</string>
+    <string name="back_button">Back Button</string>
 
     <!--    Spinner-->
 

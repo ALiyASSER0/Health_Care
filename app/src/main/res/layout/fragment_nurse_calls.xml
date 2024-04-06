@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.nurse.NurseCalls"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!-- Back arrow -->
+        <ImageView
+            android:id="@+id/image_back_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="Back"
+            android:padding="8dp"
+            android:clickable="true"
+            android:onClick="onBackPressed"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calls"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardStrokeColor="@android:color/darker_gray"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Patient Name -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_person_24"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Patient Icon"
+                    app:tint="@color/light_blue" />
+
+                <TextView
+                    android:id="@+id/text_patient_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Room Number -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_bedroom_child_24"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Patient Room Icon"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/text_room_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Number"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+            <!-- Call Date -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_calendar_month_24"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Call Date Icon"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/text_call_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Date"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+            <!-- Surgery Name -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_health_and_safety_24"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Surgey Name Icon"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/text_surgery_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surgery"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+            <!-- Surgery Date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Call Date Icon"
+                    app:tint="@color/light_blue" />
+            <TextView
+                android:id="@+id/text_surgery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surgery Date"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accept"
+                    android:backgroundTint="@color/green"/>
+
+                <!-- Add space between buttons -->
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"/>
+
+                <Button
+                    android:id="@+id/button_show_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Details"
+                    android:backgroundTint="@color/orange_color"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

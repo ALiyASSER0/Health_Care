@@ -21,4 +21,6 @@
     <color name="red">#BD1010</color>
     <color name="profile_color">#20CCBC</color>
     <color name="dark_orange">#F36D13</color>
+    <color name="green_color">#00FF00</color>
+    <color name="orange_color">#FFA500</color>
 </resources>
