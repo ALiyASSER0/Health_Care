@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.nurse.DetailsNurse">
-
-
+    tools:context=".UI.nurse.NurseDetalis"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        tools:ignore="UseCompoundDrawables">
+        android:padding="16dp">
 
         <ImageView
             android:layout_width="36dp"
@@ -22,20 +20,15 @@
             android:src="@drawable/baseline_arrow_back_24"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="8dp"
-            android:contentDescription="@string/back_button"
-            android:clickable="true"
-            android:onClick="onBackPressed"/>
+            android:contentDescription="Back Button"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:style="@style/TextAppearance.AppCompat.Headline"
-            android:text="Case Details"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            />
-
+            android:style="@style/TextAppearance.AppCompat.Headline"
+            android:text="             Case Details"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -82,7 +75,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,24 +83,22 @@
             app:cardBackgroundColor="#d9d9d9">
 
             <ImageView
-                android:id="@+id/icon"
+                android:id="@+id/icon1"
                 android:layout_width="24dp"
                 android:layout_height="15dp"
                 android:src="@drawable/baseline_circle_24" />
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/icon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="?attr/actionBarPopupTheme"
-                android:padding="8dp"
                 android:src="@drawable/baseline_assignment_ind_24"
-                android:contentDescription="Description of the image button"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:padding="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="Medical record icon"/>
 
         </androidx.cardview.widget.CardView>
-
-
-
 
     </LinearLayout>
 
@@ -150,7 +140,7 @@
                     android:id="@+id/patient_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -171,7 +161,7 @@
                     android:id="@+id/patient_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -192,7 +182,7 @@
                     android:id="@+id/patient_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -213,7 +203,7 @@
                     android:id="@+id/case_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -235,7 +225,7 @@
                     android:id="@+id/doctor_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
 
@@ -258,7 +248,7 @@
                     android:id="@+id/nurse_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -280,7 +270,7 @@
                     android:id="@+id/case_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:text="--" />
 
             </LinearLayout>
             <Space
@@ -302,7 +292,12 @@
                     android:id="@+id/case_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{stringValue != null ? stringValue.trim() : ""}' />
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="start"
+                    android:maxLines="10"
+                    android:scrollbars="vertical" />
 
             </LinearLayout>
 
@@ -313,4 +308,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+</LinearLayout>
