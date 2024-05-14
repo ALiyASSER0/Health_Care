@@ -23,11 +23,12 @@
             android:contentDescription="Back Button"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
             android:style="@style/TextAppearance.AppCompat.Headline"
-            android:text="             Case Details"
+            android:text="Case Details"
             android:textStyle="bold"/>
 
     </LinearLayout>
