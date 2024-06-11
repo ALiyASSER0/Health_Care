@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="@dimen/_10sdp"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/whiteTextColor"
+    app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:background="#FFFFFF"
+
+          >
+            <TextView
+                android:id="@+id/textTilte1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                tools:text="maadi - "
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                />
+            <TextView
+                android:id="@+id/textTilte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                tools:text="Cardiologist"
+               app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toEndOf="@+id/textTilte1"
+
+                />
+
+             <ImageView
+                 android:id="@+id/calender"
+                 android:layout_width="@dimen/_15sdp"
+                 android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/calender"
+                 android:layout_marginStart="@dimen/_15sdp"
+                 android:layout_marginTop="@dimen/_2sdp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textTilte1"
+                 />
+            <TextView
+                android:id="@+id/textRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="17/04/2024"
+                app:layout_constraintStart_toEndOf="@+id/calender"
+                app:layout_constraintTop_toTopOf="@+id/calender"
+                app:layout_constraintBottom_toBottomOf="@+id/calender"
+                android:layout_marginStart="@dimen/_3sdp"
+                />
+            <ImageView
+                android:id="@+id/notDone"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/notdone"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintStart_toEndOf="@+id/textRate"
+                app:layout_constraintTop_toBottomOf="@+id/textTilte1"
+                />
+            <TextView
+                android:id="@+id/textReview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="unconfirmed(Payment is not made)"
+                app:layout_constraintStart_toEndOf="@+id/notDone"
+                app:layout_constraintTop_toTopOf="@+id/notDone"
+                app:layout_constraintBottom_toBottomOf="@+id/notDone"
+                android:layout_marginStart="@dimen/_2sdp"
+                />
+
+            <TextView
+                android:id="@+id/textFeesPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="* To complete the reservation,pay within 6 hours using the Fawry code."
+                android:textColor="#4A4242"
+                android:textSize="15sp"
+
+                app:layout_constraintEnd_toStartOf="@+id/wait"
+                app:layout_constraintStart_toStartOf="@+id/calender"
+                app:layout_constraintTop_toBottomOf="@+id/calender" />
+
+            <ImageView
+                android:id="@+id/wait"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/hourglass"
+
+                app:layout_constraintBottom_toBottomOf="@+id/textFeesPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textReview"
+                />
+
+            <com.google.android.material.button.MaterialButton
+               android:id="@+id/btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.50"
+                app:layout_constraintHeight_percent="0.22"
+                android:text="Detials"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/main_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFeesPrice" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
