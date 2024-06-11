@@ -73,4 +73,12 @@
         <item>AB+</item>
         <item>AB-</item>
     </string-array>
+
+
+    <string-array name="filter_options">
+        <item>Name</item>
+        <item>Category</item>
+    </string-array>
+
+
 </resources>

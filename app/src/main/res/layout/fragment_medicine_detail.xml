@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".UI.pharmacy.medicine_detail">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_medicine_image"
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/insurance_number" />
+
+    <TextView
+        android:id="@+id/tv_medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine Name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_medicine_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_add_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_related_medicines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Related Medicines"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_related_medicine_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/fragment_item_medicine" />
+
+</LinearLayout>
