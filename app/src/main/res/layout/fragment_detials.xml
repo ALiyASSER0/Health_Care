@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.patient.Reservations.Reservation.Reservations">
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_back_white"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        />
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/baseline_person_pin_24"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        />
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose your appointment"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        app:layout_constraintHeight_percent="0.93" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconName"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/hospital"
+                app:layout_constraintBottom_toBottomOf="@+id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iconName"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Hospital" />
+
+            <TextView
+                android:id="@+id/nameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/iconName"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                android:text="El maadi" />
+
+            <ImageView
+                android:id="@+id/iconClinic"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/clinic"
+                app:layout_constraintBottom_toBottomOf="@+id/nameClinic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameValue" />
+            <TextView
+                android:id="@+id/nameClinic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@+id/iconClinic"
+                app:layout_constraintTop_toBottomOf="@+id/nameValue"
+                android:text="clinic" />
+
+            <TextView
+                android:id="@+id/nameCliniclValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/iconClinic"
+                app:layout_constraintTop_toBottomOf="@+id/nameClinic"
+                tools:text="Cardiologist" />
+
+            <ImageView
+                android:id="@+id/iconWallet"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/wallet2"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameCliniclValue" />
+
+            <TextView
+                android:id="@+id/priceWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toEndOf="@+id/iconWallet"
+                app:layout_constraintTop_toTopOf="@+id/iconWallet"
+                android:text="Consultation fee:" />
+
+            <TextView
+                android:id="@+id/priceWalletValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="#494242"
+                app:layout_constraintStart_toEndOf="@+id/priceWallet"
+                app:layout_constraintTop_toTopOf="@+id/priceWallet"
+                tools:text="400 EG" />
+
+            <ImageView
+                android:id="@+id/iconTime"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/time"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+            <TextView
+                android:id="@+id/numberTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toEndOf="@+id/iconTime"
+                app:layout_constraintTop_toTopOf="@+id/iconTime"
+                android:text="Number in queue:" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/iconWallet"
+                />
+
+            <TextView
+                android:id="@+id/numberTimeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="#494242"
+                app:layout_constraintStart_toEndOf="@+id/numberTime"
+                app:layout_constraintTop_toTopOf="@+id/numberTime"
+                tools:text="1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDetials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconTime"
+                tools:listitem="@layout/item_detials" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameNote"
+                />
+
+            <TextView
+                android:id="@+id/nameNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Appointment with prior attendance"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerDetials" />
+
+            <TextView
+                android:id="@+id/nameBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Payment Method:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+
+
+            <ImageView
+                android:id="@+id/fawry_logo"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/fawry_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/check"
+                app:layout_constraintStart_toEndOf="@+id/check"
+                app:layout_constraintTop_toTopOf="@+id/check" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fawry"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/main_color"
+                android:textSize="20sp"
+                android:text="Reserve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintHeight_percent="0.082"
+                app:layout_constraintWidth_percent="0.90"
+                app:layout_constraintTop_toBottomOf="@+id/nameBooking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+               />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:lottie_rawRes="@raw/progress"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:elevation="20dp"
+                app:layout_constraintStart_toStartOf="@+id/fawry"
+                app:layout_constraintTop_toTopOf="@+id/fawry"
+                app:layout_constraintEnd_toEndOf="@+id/fawry"
+                app:layout_constraintBottom_toBottomOf="@+id/fawry"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progress2"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerDetials"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/progress2" />
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/custom_checkbox"
+                app:layout_constraintBottom_toBottomOf="@+id/nameBooking"
+                app:layout_constraintStart_toEndOf="@+id/nameBooking"
+                app:layout_constraintTop_toTopOf="@+id/nameBooking" />
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/custom_checkbox"
+                app:layout_constraintBottom_toBottomOf="@+id/fawry_logo"
+                app:layout_constraintStart_toEndOf="@+id/fawry_logo"
+                app:layout_constraintTop_toTopOf="@+id/fawry_logo" />
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/masterpass_seeklogo"
+                app:layout_constraintBottom_toBottomOf="@+id/check1"
+                app:layout_constraintStart_toEndOf="@+id/check1"
+                app:layout_constraintTop_toTopOf="@+id/check1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_color"
+>
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_back_white"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        />
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/baseline_person_pin_24"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:text="Information"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="* To complete the reservation,pay within 6 hours using the Fawry code."
+                android:textColor="#4A4242"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iconName"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toBottomOf="@+id/nameValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/iconName"
+            app:layout_constraintTop_toBottomOf="@+id/note"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/nameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_bold"
+            android:textColor="@color/main_color"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="ali yasser ali" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameValue"
+                />
+            <ImageView
+                android:id="@+id/iconHospital"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/hospital2"
+                app:layout_constraintBottom_toBottomOf="@+id/nameHospitalValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameHospital" />
+            <TextView
+                android:id="@+id/nameHospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameValue"
+               app:layout_constraintTop_toBottomOf="@+id/view"
+                android:text="Hospital" />
+            <TextView
+                android:id="@+id/nameHospitalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameHospital"
+                app:layout_constraintTop_toBottomOf="@+id/nameHospital"
+                android:text="maadi" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameHospitalValue"
+                />
+            <TextView
+                android:id="@+id/nameClinic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameHospitalValue"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:text="Clinic" />
+            <ImageView
+                android:id="@+id/iconClinic"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/hospital2"
+                app:layout_constraintBottom_toBottomOf="@+id/nameClinicValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameClinic" />
+            <TextView
+                android:id="@+id/nameClinicValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameClinic"
+                app:layout_constraintTop_toBottomOf="@+id/nameClinic"
+                tools:text="ali yasser ali" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameClinicValue"
+                />
+            <TextView
+                android:id="@+id/nameDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameClinicValue"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                android:text="Reservation Date" />
+            <TextView
+                android:id="@+id/nameDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameDate"
+                app:layout_constraintTop_toBottomOf="@+id/nameDate"
+                tools:text="ali yasser ali" />
+            <ImageView
+                android:id="@+id/iconDate"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/date"
+                app:layout_constraintBottom_toBottomOf="@+id/nameDateValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameDate" />
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameDateValue"
+                />
+            <TextView
+                android:id="@+id/namePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameDateValue"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                android:text="Payment Code (Fawry)" />
+            <TextView
+                android:id="@+id/namePaymentValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePayment"
+                app:layout_constraintTop_toBottomOf="@+id/namePayment"
+                android:text="9330728024" />
+            <ImageView
+                android:id="@+id/iconPayment"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/payment"
+                app:layout_constraintBottom_toBottomOf="@+id/namePaymentValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/namePayment" />
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/namePaymentValue"
+                />
+            <TextView
+                android:id="@+id/nameUnconfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePaymentValue"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                android:text="Unconfirmed" />
+            <TextView
+                android:id="@+id/nameUnconfirmedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameUnconfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/nameUnconfirmed"
+                android:text="Payment is not made" />
+            <ImageView
+                android:id="@+id/iconUnconfirmed"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/notdone"
+                app:layout_constraintBottom_toBottomOf="@+id/nameUnconfirmedValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameUnconfirmed" />
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameUnconfirmedValue"
+                />
+            <TextView
+                android:id="@+id/nameReservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameUnconfirmedValue"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                android:text="Reservation Type" />
+            <TextView
+                android:id="@+id/nameReservationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameReservation"
+                app:layout_constraintTop_toBottomOf="@+id/nameReservation"
+                android:text="Reserved Online" />
+            <ImageView
+                android:id="@+id/iconReservation"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/person"
+                app:layout_constraintBottom_toBottomOf="@+id/nameReservationValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameReservation" />
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nameReservationValue"
+                />
+            <TextView
+                android:id="@+id/namePaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameReservationValue"
+                app:layout_constraintTop_toBottomOf="@+id/view7"
+                android:text="Paid Expiration Date" />
+
+            <TextView
+                android:id="@+id/namePaidValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePaid"
+                app:layout_constraintTop_toBottomOf="@+id/namePaid"
+                tools:text="ali yasser ali" />
+            <TextView
+                android:id="@+id/namePaidValueTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePaidValue"
+                app:layout_constraintTop_toBottomOf="@+id/namePaidValue"
+                tools:text="ali yasser ali" />
+            <ImageView
+                android:id="@+id/iconPaid"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/hourglass"
+                app:layout_constraintBottom_toBottomOf="@+id/namePaidValueTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/namePaid" />
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/arrow"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@+id/namePaidValueTime"
+                />
+            <TextView
+                android:id="@+id/nameReservationOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePaidValueTime"
+                app:layout_constraintTop_toBottomOf="@+id/view8"
+                android:text="Reservation Order" />
+
+            <TextView
+                android:id="@+id/nameReservationOrderValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+
+                android:textColor="@color/main_color"
+                android:textSize="20sp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/nameReservationOrder"
+                app:layout_constraintTop_toBottomOf="@+id/nameReservationOrder" />
+            <ImageView
+                android:id="@+id/iconReservationOrder"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ticket"
+                app:layout_constraintBottom_toBottomOf="@+id/nameReservationOrderValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameReservationOrder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+<com.google.android.material.button.MaterialButton
+   android:id="@+id/btn"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:text="Cancel"
+    android:textAllCaps="false"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:backgroundTint="@color/white"
+    android:background="@drawable/background"
+    app:layout_constraintHeight_percent="0.042"
+    app:layout_constraintWidth_percent="0.90"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/cardView2"
+/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
