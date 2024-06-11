@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_color">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_back_white"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/_8sdp"
+            />
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/baseline_person_pin_24"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/_8sdp"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:text="Room details"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconName"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/user"
+                app:layout_constraintBottom_toBottomOf="@+id/nameValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Incharge"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/iconName"
+                app:layout_constraintTop_toTopOf="@+id/iconName" />
+
+            <TextView
+                android:id="@+id/nameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="ali yasser ali"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@color/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/nameValue" />
+
+            <ImageView
+                android:id="@+id/iconHospital"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/room"
+                app:layout_constraintBottom_toBottomOf="@+id/nameHospitalValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameHospital" />
+
+            <TextView
+                android:id="@+id/nameHospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Name of Room"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameValue"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/nameHospitalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="Emergency"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameHospital"
+                app:layout_constraintTop_toBottomOf="@+id/nameHospital" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@color/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/nameHospitalValue" />
+
+            <TextView
+                android:id="@+id/nameClinic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Type of Room"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameHospitalValue"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <ImageView
+                android:id="@+id/iconClinic"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/operating"
+                app:layout_constraintBottom_toBottomOf="@+id/nameClinicValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameClinic" />
+
+            <TextView
+                android:id="@+id/nameClinicValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="MultiRoom"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameClinic"
+                app:layout_constraintTop_toBottomOf="@+id/nameClinic" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@color/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/nameClinicValue" />
+
+            <TextView
+                android:id="@+id/nameDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Status of Room"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameClinicValue"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/nameDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="Empty"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameDate"
+                app:layout_constraintTop_toBottomOf="@+id/nameDate" />
+
+            <ImageView
+                android:id="@+id/iconDate"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/clipboard"
+                app:layout_constraintBottom_toBottomOf="@+id/nameDateValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameDate" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@color/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/nameDateValue" />
+
+            <TextView
+                android:id="@+id/namePayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Number In Room"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameDateValue"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/namePaymentValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="1"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePayment"
+                app:layout_constraintTop_toBottomOf="@+id/namePayment" />
+
+            <ImageView
+                android:id="@+id/iconPayment"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/room_door2"
+                app:layout_constraintBottom_toBottomOf="@+id/namePaymentValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/namePayment" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@color/arrow"
+                app:layout_constraintTop_toBottomOf="@+id/namePaymentValue" />
+
+            <TextView
+                android:id="@+id/nameUnconfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:text="Max Number In Room"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/namePaymentValue"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/nameUnconfirmedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="3"
+                android:textColor="@color/arrow"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameUnconfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/nameUnconfirmed" />
+
+            <ImageView
+                android:id="@+id/iconUnconfirmed"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/room_door"
+                app:layout_constraintBottom_toBottomOf="@+id/nameUnconfirmedValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameUnconfirmed" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bed"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/main_color"
+                android:text="Beds"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.083"
+                app:layout_constraintTop_toBottomOf="@+id/nameUnconfirmed"
+                app:layout_constraintWidth_percent="0.27"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
