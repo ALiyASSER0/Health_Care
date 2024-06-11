@@ -34,7 +34,14 @@ binding.cardEmploye.setOnClickListener {
     val action=HomeDirections.actionHome2ToEmployee()
     findNavController().navigate(action)
 }
+        binding.cardTasks.setOnClickListener {
 
+            val action=HomeDirections.actionHomeHrToProfile("")
+            findNavController().navigate(action)
+        }
+binding.cardAttendance.setOnClickListener {
+
+}
     }
 
     override fun onDestroyView() {

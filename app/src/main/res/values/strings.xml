@@ -13,12 +13,25 @@
     <string name="status">Status</string>
     <string name="blood">Blood Type</string>
 
-    <!--   Page hr-->
+    <!--   Page hr Home-->
     <string name="attendance">Attendance</string>
     <string name="newEmployee">New Employee</string>
     <string name="employee">Employee</string>
     <string name="profile">My Profile</string>
 
+    <!--   Page patient Home-->
+    <string name="upLoad">Upload Record</string>
+    <string name="chat">Chat</string>
+    <string name="reservations">Reservations</string>
+    <string name="history">History</string>
+    <string name="er">Emergency</string>
+
+    <!--   Page patient Reservations-->
+    <string name="search_for_reservations">Search for Reservations</string>
+
+    <!--   Page Nurse Room-->
+    <string name="search_for_rooms">Search for Rooms</string>
+    <string name="search_for_beds">Search for Beds</string>
 
     <!--Page HR_Employee -->
 

@@ -59,7 +59,7 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:orientation="horizontal"
         app:reverseLayout="false"
-        tools:listitem="@layout/holder_tabs"
+        tools:listitem="@layout/item_tab"
         app:layout_constraintHeight_default="wrap"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginHorizontal="@dimen/_8sdp"

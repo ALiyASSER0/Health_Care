@@ -17,10 +17,11 @@
         android:label="Register" >
         <action
             android:id="@+id/action_register_to_home2"
-            app:destination="@id/home2" />
+            app:destination="@id/homeHr" />
     </fragment>
     <fragment
-        android:id="@+id/home2"
+        tools:layout="@layout/fragment_home"
+        android:id="@+id/homeHr"
         android:name="com.example.hospital.UI.hr.Home.Home"
         android:label="Home" >
         <action
@@ -29,19 +30,41 @@
         <action
             android:id="@+id/action_home2_to_register"
             app:destination="@id/register" />
+        <action
+            android:id="@+id/action_homeHr_to_profile"
+            app:destination="@id/profile" />
+        <argument
+            android:name="dataOfUser"
+            app:argType="string" />
+
+
     </fragment>
     <fragment
+        tools:layout="@layout/fragment_login"
         android:id="@+id/loginFragment"
         android:name="com.example.hospital.UI.auth.Login.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_home2"
-            app:destination="@id/home2"
-            app:popUpTo="@id/loginFragment"
+            app:destination="@id/homeHr"
+            app:popUpTo="@id/homeHr"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_patientRegister"
             app:destination="@id/patientRegister" />
+        <action
+            android:id="@+id/action_loginFragment_to_homePatient"
+            app:destination="@id/homePatient"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeNurse"
+            app:destination="@id/homeNurse"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/patientRegister"
@@ -50,7 +73,231 @@
         <action
             android:id="@+id/action_patientRegister_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpTo="@id/patientRegister"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/reservations"
+        android:name="com.example.hospital.UI.patient.Reservations.Reservation.Reservations"
+        android:label="fragment_reservations"
+        tools:layout="@layout/fragment_reservations" >
+        <action
+            android:id="@+id/action_reservations_to_detials"
+            app:destination="@id/detials" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detials"
+        android:name="com.example.hospital.UI.patient.Reservations.Detials.Detials"
+        android:label="Detials" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            />
+        <argument
+            android:name="price"
+            app:argType="string"
+            android:defaultValue="0"
+            />
+        <action
+            android:id="@+id/action_detials_to_homePatient2"
+            app:destination="@id/homePatient"
+            app:popUpTo="@id/homePatient"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_home2"
+        android:id="@+id/homePatient"
+        android:name="com.example.hospital.UI.patient.Home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homePatient_to_reservations"
+            app:destination="@id/reservations" />
+
+        <action
+            android:id="@+id/action_homePatient_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_homePatient_to_history"
+            app:destination="@id/history" />
+
+        <action
+            android:id="@+id/action_homePatient_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_homePatient_to_chaty"
+            app:destination="@id/chaty" />
+        <action
+            android:id="@+id/action_homePatient_to_profile"
+            app:destination="@id/profile" />
+        <argument
+            android:name="dataOfUser"
+            app:argType="string"
+            app:nullable="true" />
+
+
+    </fragment>
+
+
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.hospital.UI.patient.UploadMateral.MainActivity2"
+        android:label="MainActivity2" >
+
+    </activity>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.example.hospital.UI.patient.History.History.History"
+        android:label="History" >
+        <action
+            android:id="@+id/action_history_to_detials2"
+            app:destination="@id/detials2"
+           />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="ali"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detials2"
+        android:name="com.example.hospital.UI.patient.History.DetialsHistory.Detials"
+        android:label="Detials" >
+        <argument
+            android:name="userInf"
+            app:argType="com.example.hospital.Data.Models.DataHistory" />
+        <action
+            android:id="@+id/action_detials2_to_history"
+            app:destination="@id/history"
+            app:popUpTo="@id/history"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="ali" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.example.hospital.UI.patient.Reservations.Payment.Payment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <activity
+        android:id="@+id/chaty"
+        android:name="com.example.hospital.UI.hr.Chaty.Chaty"
+        android:label="activity_chaty"
+        tools:layout="@layout/activity_chaty" />
+    <fragment
+        tools:layout="@layout/fragment_home_doctor"
+        android:id="@+id/doctorHomeFragment"
+        android:name="com.example.hospital.UI.Doctors.Home.DoctorHomeFragment"
+        android:label="DoctorHomeFragment" >
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_clinicFragment"
+            app:destination="@id/clinicFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_profile"
+            app:destination="@id/profile" />
+        <argument
+            android:name="dataOfUser"
+            app:argType="string" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/clinicFragment"
+        android:name="com.example.hospital.UI.Doctors.Cases.Clinic.ClinicFragment"
+        android:label="fragment_clinic"
+        tools:layout="@layout/fragment_clinic" >
+        <action
+            android:id="@+id/action_clinicFragment_to_information"
+            app:destination="@id/information" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.hospital.UI.SharedScreen.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+        <argument
+            android:name="dataOfUser"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_information"
+        android:id="@+id/information"
+        android:name="com.example.hospital.UI.Doctors.Cases.detials.Information"
+        android:label="Information" >
+
+        <argument
+            android:name="id"
+            app:argType="string"
+         />
+
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_home_nurse"
+        android:id="@+id/homeNurse"
+        android:name="com.example.hospital.UI.nurse.Home.HomeNurse"
+        android:label="HomeNurse" >
+        <action
+            android:id="@+id/action_homeNurse_to_profile"
+            app:destination="@id/profile" />
+
+        <action
+            android:id="@+id/action_homeNurse_to_casesNurse"
+            app:destination="@id/casesNurse" />
+        <action
+            android:id="@+id/action_homeNurse_to_nurseCalls"
+            app:destination="@id/nurseCalls" />
+        <argument
+            android:name="dataOfUser"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_cases_nurse"
+        android:id="@+id/casesNurse"
+        android:name="com.example.hospital.UI.nurse.Cases.CasesScreen.CasesNurse"
+        android:label="CasesNurse" >
+        <action
+            android:id="@+id/action_casesNurse_to_caseDetials"
+            app:destination="@id/caseDetials" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_case_detials"
+        android:id="@+id/caseDetials"
+        android:name="com.example.hospital.UI.nurse.Cases.DetialsScreen.CaseDetials"
+        android:label="CaseDetials" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_nurse_room"
+        android:id="@+id/nurseCalls"
+        android:name="com.example.hospital.UI.nurse.Room.RoonNurse.NurseRoom"
+        android:label="NurseCalls" >
+        <action
+            android:id="@+id/action_nurseCalls_to_callsDetials"
+            app:destination="@id/callsDetials" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_rooms_detials"
+        android:id="@+id/callsDetials"
+        android:name="com.example.hospital.UI.nurse.Room.DetialsRoom.RoomDetials"
+        android:label="CallsDetials" >
+        <argument
+            android:name="jsonString"
+            app:argType="string" />
+    </fragment>
+
+
 </navigation>

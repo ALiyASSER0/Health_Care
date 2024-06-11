@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17B7A8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.hospital.UI.SharedScreen.Profile">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="15dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.87">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cardshape">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/G1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.08" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:enabled="false"
+                android:textColorHint="#22C7B8"
+
+                app:backgroundTint="#22C7B8"
+
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline"
+                app:endIconTint="#22C7B8"
+                app:hintTextColor="#22348E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/G1"
+                app:prefixTextColor="#22C7B8"
+                app:startIconTint="#22C7B8"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profilebackshape"
+                    android:inputType="text"
+                    android:maxLength="35"
+                    android:maxLines="1"
+                    tools:text="Mo salah"
+                    android:textAlignment="center"
+                    android:textColor="#22C7B8"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+
+                android:id="@+id/img1"
+           android:visibility="gone"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputlayout" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/e2"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="Specialist-Doctor"
+                android:textColor="#22C7B8"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img1"
+                app:layout_constraintTop_toTopOf="@+id/img1"
+
+                />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img1" />
+
+            <EditText
+                android:id="@+id/e3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="Male"
+                android:textColor="#22C7B8"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img2"
+                app:layout_constraintTop_toTopOf="@+id/img2" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img2"
+                />
+
+            <EditText
+                android:id="@+id/e4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:focusable="false"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="DD-MM-YY"
+                android:textColor="#22C7B8"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img2"
+                app:layout_constraintTop_toTopOf="@+id/img3" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img3" />
+
+            <EditText
+                android:id="@+id/e5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+
+                android:textColor="#22C7B8"
+                android:textSize="20dp"
+                android:text="City"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img4"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toEndOf="@+id/img3"
+                app:layout_constraintTop_toTopOf="@+id/img4" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img4" />
+
+            <EditText
+                android:id="@+id/e6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="Doctor@gmail"
+                android:textColor="#22C7B8"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img4"
+                app:layout_constraintTop_toTopOf="@+id/img5" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group4497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img5" />
+
+            <EditText
+                android:id="@+id/e7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/profilebackshape"
+                android:enabled="false"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="0114892200"
+                android:textColor="#22C7B8"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img4"
+                app:layout_constraintTop_toTopOf="@+id/img6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/shape1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="68dp"
+        android:src="@drawable/circleofimg"
+        app:layout_constraintBottom_toTopOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        app:layout_constraintTop_toTopOf="@id/card_view" />
+
+    <ImageView
+        android:id="@+id/shape2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="68dp"
+        android:padding="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maskgroup2x"
+        app:layout_constraintBottom_toBottomOf="@id/shape1"
+        app:layout_constraintEnd_toEndOf="@id/shape1"
+        app:layout_constraintStart_toStartOf="@id/shape1"
+        app:layout_constraintTop_toTopOf="@id/shape1" />
+
+    <ImageView
+        android:id="@+id/shape4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:elevation="78dp"
+        android:src="@drawable/circleofimg"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+    <ImageView
+        android:id="@+id/pencil1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pencil"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SaveButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#2CBFBFBF"
+        android:elevation="25dp"
+        android:enabled="false"
+        android:text="Save"
+        android:textColor="#22C7B8"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:cornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@id/card_view"
+        app:strokeColor="#2CBFBFBF"
+        app:strokeWidth="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/CancelButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="25dp"
+        android:enabled="false"
+        android:text="Cancel"
+        android:textColor="#D6274A"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:backgroundTint="#2CBFBFBF"
+        app:cornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_view"
+        app:layout_constraintStart_toStartOf="@+id/card_view"
+        app:strokeColor="#2CBFBFBF"
+        app:strokeWidth="5dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

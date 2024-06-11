@@ -1,6 +1,8 @@
 package com.example.hospital.UI.hr.Register
 
+import android.app.DatePickerDialog
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +18,7 @@ import com.example.hospital.Data.Models.ModelRegisterHr
 import com.example.hospital.R
 import com.example.hospital.databinding.FragmentRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.Calendar
 import javax.inject.Inject
 @AndroidEntryPoint
 class Register : Fragment() {
@@ -28,7 +31,8 @@ class Register : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
       _binding=FragmentRegisterBinding.inflate(inflater)
-        return binding.root
+
+         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -104,7 +108,7 @@ class Register : Fragment() {
                        binding.editAddress.text.toString(),
                        "Cardiology",
                        binding.dropdownType.text.toString(),
-                       "2023-12-21",
+                       binding.editBirthday.text.toString(),
                        binding.editEmail.text.toString(),
                        binding.editFname.text.toString(),
                        binding.dropdownGender.text[0].toString(),
@@ -145,6 +149,34 @@ class Register : Fragment() {
 
 
     fun onClicks(){
+        binding.editBirthday.setOnClickListener {
+
+            val c: Calendar = Calendar.getInstance()
+
+            val year: Int = c.get(Calendar.YEAR)
+            val month: Int = c.get(Calendar.MONTH)
+            val day: Int = c.get(Calendar.DAY_OF_MONTH)
+
+            var datePickerDialog = DatePickerDialog(
+                requireContext(),
+                { view, year, monthOfYear, dayOfMonth ->
+
+                    binding.editBirthday.setText(dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
+                }, year - 21, month, day
+            )
+            Log.e("date", System.currentTimeMillis().toString() + "")
+            val c1: Calendar = Calendar.getInstance()
+
+            c1.set(year - 17, 0, 1)
+            datePickerDialog!!.getDatePicker().setMaxDate(c1.getTimeInMillis())
+            c1.set(year-75,0,1)
+            datePickerDialog!!.getDatePicker().setMinDate(c1.getTimeInMillis())
+
+            datePickerDialog!!.show()
+
+
+        }
+
         binding.btnCreate.setOnClickListener{
             binding.spinnerGender.error=null
             binding.spinnerSpecialist.error=null

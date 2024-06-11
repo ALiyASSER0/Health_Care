@@ -119,29 +119,7 @@
             app:layout_constraintTop_toBottomOf="@+id/spinner_gender"
             app:drawableEndCompat="@drawable/ic_arrow_down"
             app:drawableStartCompat="@drawable/ic_green_date" />
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/spinner_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintTextColor="@color/main_color"
-            app:boxStrokeColor="@color/main_color"
-            app:endIconTint="@color/arrow"
-            android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:hint="@string/status"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-            app:layout_constraintTop_toBottomOf="@+id/edit_birthday"
 
-            >
-            <AutoCompleteTextView
-                android:id="@+id/dropdown_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_green_status"
-                android:drawablePadding="@dimen/_7sdp"
-                android:inputType="none"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -156,7 +134,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:hint="@string/blood"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_status"
+            app:layout_constraintTop_toBottomOf="@+id/edit_birthday"
 
             >
             <AutoCompleteTextView
@@ -204,32 +182,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/edit_nationalID"
             android:src="@drawable/identity"
             />
-        <EditText
-            android:id="@+id/edit_InsuranceNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="@dimen/_32sdp"
-            android:layout_marginHorizontal="@dimen/_12sdp"
-            android:background="@drawable/edit_shape_trans"
-            android:hint="@string/insuranceNumber"
-            android:textColor="@color/black"
-            android:inputType="phone"
-            android:maxLines="1"
-            android:padding="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@+id/edit_nationalID"
-            />
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintWidth_percent="0.10"
-            app:layout_constraintHeight_percent="0.025"
-            app:layout_constraintTop_toTopOf="@+id/edit_InsuranceNumber"
-            app:layout_constraintStart_toStartOf="@+id/edit_InsuranceNumber"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_InsuranceNumber"
-            android:src="@drawable/insurance_number"
-            />
+
+
 
         <EditText
             android:id="@+id/edit_phone"
@@ -246,7 +200,7 @@
             android:padding="@dimen/_10sdp"
             android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@+id/edit_InsuranceNumber"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nationalID"
             />
 
         <EditText
@@ -323,24 +277,35 @@
             />
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_create"
+<com.google.android.material.button.MaterialButton
+            android:id="@+id/fawry"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintWidth_percent="0.90"
-            app:layout_constraintHeight_percent="0.057"
-
-            android:layout_marginTop="@dimen/_12sdp"
             android:backgroundTint="@color/main_color"
-            android:text="@string/create_user"
+            android:textSize="20sp"
+            android:text="Confirm"
             android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintHeight_percent="0.082"
+            app:layout_constraintWidth_percent="0.90"
             app:layout_constraintTop_toBottomOf="@+id/edit_password_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
-
-
-
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:lottie_rawRes="@raw/progress"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:elevation="20dp"
+            app:layout_constraintStart_toStartOf="@+id/fawry"
+            app:layout_constraintTop_toTopOf="@+id/fawry"
+            app:layout_constraintEnd_toEndOf="@+id/fawry"
+            app:layout_constraintBottom_toBottomOf="@+id/fawry"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

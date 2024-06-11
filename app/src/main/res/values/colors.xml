@@ -14,13 +14,20 @@
     <color name="gray">#D6D6D6</color>
     <color name="purple">#915FDC</color>
     <color name="light_blue">#5FDCDC</color>
+    <color name="c">#DCBA5F</color>
+    <color name="cc">#915FDC  </color>
     <color name="main_color">#22C7B8</color>
     <color name="arrow">#7f7f7f</color>
     <color name="btn">#136CD8</color>
     <color name="orange">#DC915F</color>
     <color name="red">#BD1010</color>
     <color name="profile_color">#20CCBC</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="bg_chat_item">#FBE8B2</color>
+    <color name="bg_chat_item_self">#9CD1FF</color>
     <color name="dark_orange">#F36D13</color>
     <color name="green_color">#00FF00</color>
     <color name="orange_color">#FFA500</color>
+    <color name="grayy">#EAE1E1</color>
+
 </resources>

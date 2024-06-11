@@ -18,6 +18,7 @@ private val _errorBody=MutableLiveData<ResponseBody>()
     fun register(model: ModelRegisterHr){
        viewModelScope.launch {
          val response= repo.hrRegister(model)
+
            if(response.isSuccessful){
                _liveData.value=true
            }else{

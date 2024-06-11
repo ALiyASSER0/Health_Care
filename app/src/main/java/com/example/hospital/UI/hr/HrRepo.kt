@@ -2,6 +2,7 @@ package com.example.hospital.UI.hr
 
 import ModelHrList
 import android.util.Log
+import com.example.hospital.Data.Models.ModelCreateRoom
 import com.example.hospital.Data.Models.ModelRegisterHr
 import com.example.hospital.Data.Models.ResponsePatientRegister
 import com.example.hospital.Data.network.RetrofitService
@@ -26,6 +27,9 @@ suspend fun getAllUsers(): Any? {
 
 suspend fun hrRegister(model: ModelRegisterHr): Response<ResponsePatientRegister> {
      return retrofitService.registerUserHr(model)
+    }
+ suspend fun createRoom(): Response<ModelCreateRoom> {
+        return retrofitService.createRoom()
     }
 
 

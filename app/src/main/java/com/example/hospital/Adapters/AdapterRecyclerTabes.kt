@@ -64,7 +64,6 @@ class AdapterRecyclerTabes(val id:(String)->Unit) : RecyclerView.Adapter<Adapter
                 rowIndex = layoutPosition
               id.invoke(list?.get(layoutPosition)!!)
 
-                notifyDataSetChanged()
             }
         }
 
